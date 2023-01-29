@@ -1,83 +1,42 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "ctrl+`",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "vim.active && textInputFocus"
     },
     {
-        "key": "alt+m",
-        "command": "gitlens.toggleFileBlame",
-        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "vim.active && inQuickOpen"
     },
     {
-        "key": "alt+b",
-        "command": "-gitlens.toggleFileBlame",
-        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+        "key": "alt+l",
+        "command": "editor.action.smartSelect.grow",
+        "when": "vim.active && inQuickOpen"
     },
     {
-        "key": "alt+b",
-        "command": "editor.action.revealDefinition",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "vim.active && inQuickOpen"
     },
     {
-        "key": "f12",
-        "command": "-editor.action.revealDefinition",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "vim.active && textInputFocus"
     },
     {
-        "key": "ctrl+f12",
-        "command": "-editor.action.goToImplementation",
-        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+        "key": "tab",
+        "command": "-extension.vim_tab",
+        "when": "vim.active && textInputFocus && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
-        "key": "ctrl+m n",
-        "command": "workbench.action.toggleMaximizedPanel",
-        "when": "terminal.active"
+        "key": "ctrl+shift+a",
+        "command": "editor.emmet.action.balanceOut"
     },
     {
-        "key": "ctrl+l",
-        "command": "workbench.action.terminal.clear",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+\\",
-        "command": "workbench.action.joinTwoGroups"
-    },
-    {
-        "key": "ctrl+] ]",
-        "command": "editor.emmet.action.matchTag"
-    },
-    {
-        "key": "alt+v alt+v",
+        "key": "alt+v v",
         "command": "toggleVim"
-    },
-    {
-        "key": "alt+r alt+r",
-        "command": "workbench.action.terminal.runSelectedText"
-    },
-    {
-        "key": "alt+d",
-        "command": "editor.action.revealDeclaration"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "expandLineSelection",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "cmd+w",
-        "when": "!editorIsOpen && !multipleEditorGroups",
-        "command": "workbench.action.quit"
-    },
-    {
-        "key": "ctrl+shift+g",
-        "command": "workbench.view.scm",
-        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-    },
-    {
-        "key": "ctrl+shift+g g",
-        "command": "-workbench.view.scm",
-        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
     },
     {
         "key": "ctrl+up",
@@ -90,75 +49,67 @@
         "when": "workbench.scm.active"
     },
     {
-        "key": "ctrl+m m",
-        "command": "workbench.action.maximizeEditor"
-    },
-    {
-        "key": "alt+k k",
-        "command": "git.commit"
-    },
-    {
-        "key": "ctrl+k k",
-        "command": "trunk.formatFile"
-    },
-    {
-        "key": "ctrl+shift+g d",
-        "command": "git.clean"
-    },
-    {
-        "key": "ctrl+shift+g o",
-        "command": "git.openChange"
-    },
-    {
-        "key": "tab",
-        "command": "-extension.vim_tab",
-        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "redo"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion",
-        "when": "vim.active && textInputFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "vim.active && textInputFocus"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.quickOpenSelectNext",
-        "when": "vim.active && inQuickOpen"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "vim.active && inQuickOpen"
-    },
-    {
-        "key": "ctrl+shift+q",
-        "command": "git.openFile",
-        "when": "editorFocus && isInDiffEditor"
-    },
-    {
-        "key": "ctrl+shift+q",
-        "command": "git.openChange",
-        "when": "editorFocus && !isInDiffEditor"
-    },
-    {
-        "key": "ctrl+g ctrl+r",
-        "command": "git.revertSelectedRanges",
-        "when": "isInDiffEditor"
-    },
-    {
-        "key": "ctrl+alt+z",
-        "command": "workbench.action.toggleZenMode"
-    },
-    {
         "key": "ctrl+j",
         "command": "-workbench.action.togglePanel"
     },
+    {
+        "key": "ctrl+shift+q",
+        "command": "git.openChanges",
+        "when": "editorFocus && !isInDiffEditor"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.files.openFile",
+        "when": "editorFocus && isInDiffEditor"
+    },
+    {
+        "key": "alt+l",
+        "command": "editor.action.smartSelect.expand",
+        "when": "vim.active && textInputFocus && !inDebugRepl && vim.mode == 'Visual'"
+    },
+    {
+        "key": "alt+h",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "vim.active && textInputFocus && !inDebugRepl && vim.mode == 'Visual'"
+    },
+    {
+        "key": "ctrl+space space",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    }
 ]

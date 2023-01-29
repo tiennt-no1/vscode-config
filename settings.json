@@ -19,26 +19,6 @@
     "editor.fontLigatures": true,
     "editor.inlineSuggest.enabled": true,
     "vim.vimrc.enable": true,
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "<leader>",
-                "m"
-            ],
-            "commands": [
-                "bookmarks.toggle"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b"
-            ],
-            "commands": [
-                "bookmarks.list"
-            ]
-        }
-    ],
     "vim.camelCaseMotion.enable": true,
     "vim.changeWordIncludesWhitespace": true,
     "vim.autoindent": false,
@@ -79,40 +59,162 @@
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
+    "vim.useCtrlKeys": false,
     "vim.hlsearch": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "d",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "<C-n>"
-            ],
-            "commands": [
-                ":nohl"
-            ]
-        },
-        {
-            "before": [
-                "K"
-            ],
-            "commands": [
-                "lineBreakInsert"
-            ],
-            "silent": true
-        }
-    ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false
-    }
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "redhat.telemetry.enabled": true,
+    "vim.vimrc.path": "C:/Users/tiennt/Desktop/vim-stuff/.vimrc",
+    "window.zoomLevel": 1,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "breadcrumbs.enabled": false,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "leader",
+                "x"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "i"
+            ],
+            "commands": [
+                "workbench.action.navigateBack",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.navigateForward",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToPreviousGroup",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToNextGroup",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "space"
+            ],
+            "commands": [
+                "workbench.action.quickOpen",
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatSelection",
+            ]
+        },
+    ]
 }
